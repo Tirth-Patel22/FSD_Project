@@ -1,0 +1,110 @@
+.navbar {
+    background-color: #3E8DA8;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 99;
+  }
+  .dropdown-menu {
+    background-color: #3E8DA8;
+  }
+  .dropdown-item {
+    color: white;
+  }
+  .dropdown-item:hover {
+    background-color: #2D6B88; /* Adjusted hover effect */
+    color: white; /* Ensures text stays visible */
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    max-width: 300px; /* Adjust as needed */
+  }
+  
+  .search-input {
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 15px 0 0 15px; /*Rounded only on left */
+    padding: 8px 12px;
+  }
+  
+  .search-btn {
+    background-color: white;
+    border: 2px solid #ccc;
+    border-left: none; /* Removes duplicate border */
+    padding: 8px 15px;
+    border-radius: 0 15px 15px 0; /* Rounded only on right */
+    cursor: pointer;
+  }
+  
+  .search-btn:hover {
+    background-color: #ddd;
+  }
+  
+  @media (max-width: 768px) {
+    .search-container {
+      max-width: 80%;
+    }
+  }
+  
+  .nav-item input[type="text"] {
+    width: 100%;
+  }
+  /* Equal spacing between navbar items */
+  .navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+  }
+  /* Styling for the navbar links */
+  .nav-link {
+    color: white; /* Ensures text color is white */
+    padding: 10px 15px; /* Added padding for better click area */
+    font-weight: bold; /* Makes the text bold for better visibility */
+    transition: all 0.3s ease;
+  }
+  .nav-link:hover {
+    background-color: #2D6B88; /* Hover effect for better contrast */
+    color: white;
+  }
+  /* Style for Sign up button */
+  .nav-item.btn .nav-link {
+    color: #3E8DA8;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.9);
+  }
+  .nav-item.btn .nav-link:hover {
+    background-color: #3E8DA8;
+    color: white;
+  }
+  .nav-item.btn .nav-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px white;
+  }
+  #img {
+    height: 40px;
+    width: auto;
+  }
+  /* Mobile responsive adjustments */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: column;
+      margin-left: 0;
+    }
+    .search-input {
+      width: 80%;
+    }
+  }
+  .modal-content {
+    width: 500px;
+  }
+  .invalid-feedback {
+    display: block;
+  }

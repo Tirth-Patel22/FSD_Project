@@ -1,0 +1,89 @@
+.card {
+    width: 250px;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all content inside the card */
+    justify-content: center;
+    background-color: whitesmoke;
+}
+.price {
+    font-size: 1.2rem;
+}
+.original-price {
+    text-decoration: line-through;
+    color: red;
+}
+.cart-btn-group {
+    display: none; /* Hide initially */
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+.cart-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: 0.3s;
+    min-width: 120px;
+    display: block; /* Ensure button is displayed correctly */
+}
+.cart-btn:hover {
+    background-color: #218838;
+}
+.qty-btn {
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.qty-btn:hover {
+    background-color: #e0a800;
+}
+@media (max-width: 767px) {
+    .container-fluid-md {
+      display: none;
+    }
+  }
+
+  /* Show the original container on larger screens (768px and above) */
+  @media (min-width: 768px) {
+    .container-fluid-sm {
+      display: none;
+    }
+  }
+  .first{
+    background-image: url('https://img.freepik.com/free-photo/composition-black-friday-shopping-cart-with-copy-space_23-2148667046.jpg?ga=GA1.1.1132223192.1738475215&semt=ais_hybrid');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10%;
+    margin: 0%;
+  }
+  .second{
+    background-image: url('https://img.freepik.com/free-photo/paper-bags-different-colors-blue-background-top-view_169016-41285.jpg?ga=GA1.1.1132223192.1738475215&semt=ais_hybrid_sidr');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10%;
+    margin: 0%;
+  }
+  .smfirst{
+    height: 500px;
+  }
+  .smsecond{
+    height: 500px;
+  }
+  .pick h2{
+    color: black;
+    font-weight: bolder;
+    font-size: 55px;
+    margin: 0%;
+  }

@@ -1,0 +1,54 @@
+.contact{
+    margin-top: 7%;
+}
+.contact h1{
+    font-size: 55px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 30px;
+    color: #3E8DA8;
+}
+@media (max-width: 768px) {
+    .contact h1{
+        margin-top: 25%;
+    }
+}
+.contact p{
+    color:black;
+    text-align: center;
+    padding: 2px;
+    font-size: large;
+}
+.row h2{
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 3px;
+    color: #3E8DA8;
+}
+.des{
+    color:black;
+    text-align: center;
+    font-size: large;
+}
+.touch {
+max-width: 800px;
+margin: auto;
+margin-top: 50px;
+padding: 20px;
+border-radius: 8px;
+}
+.send{
+    background-color: #3E8DA8;
+    color: white;
+}
+.send:hover{
+    color: #3E8DA8;
+    background-color: white;
+    font-weight: bolder;
+}
+label{
+    color:black;
+    font-size: large;
+}

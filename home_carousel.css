@@ -1,0 +1,80 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.carousel {
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    position: relative;
+    margin-top: 7%;
+}
+
+.carousel-inner, .carousel-item {
+    height: 100vh; /* Ensures each slide fills the screen */
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers entire area without stretching */
+    border-radius: 0px; /* Removes rounded corners for full coverage */
+}
+
+  .carousel-control-prev, .carousel-control-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      z-index: 1;
+  }
+  
+  .carousel-control-prev {
+      left: 10px; /* Position left button to the left */
+  }
+  
+  .carousel-control-next {
+      right: 10px; /* Position right button to the right */
+  }
+  
+  /* Ensure arrow icon is centered */
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+      font-size: 24px; /* Adjust the font size for better alignment */
+      line-height: 1; /* Reset line-height to ensure correct vertical centering */
+      color: white; /* White color for arrows */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  /* Hover effects for carousel buttons */
+  .carousel-control-prev:hover, .carousel-control-next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .carousel-control-prev-icon:before, .carousel-control-next-icon:before {
+      transition: transform 0.2s ease-in-out;
+  }
+  
+  .carousel-control-prev:hover .carousel-control-prev-icon:before,
+  .carousel-control-next:hover .carousel-control-next-icon:before {
+      transform: scale(1.2); /* Slightly enlarge arrows on hover */
+  }
+  @media (max-width: 768px) {
+    .carousel {
+        height: 100vh;
+    }
+    .carousel-img {
+        height: 100vh;
+    }
+}

@@ -1,0 +1,39 @@
+.banner {
+    /* position: relative; */
+    color: white;
+    padding: 40px;
+    margin-top: 5%;
+    border-radius: 10px;
+    min-height: 300px;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('twitter.png');
+    background-size: cover;
+}
+.title {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.heading {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.description {
+    font-size: 14px;
+    margin-top: 10px;
+}
+.shopnow {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #00a86b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+.shopnow:hover {
+    background-color: #008f5b;
+}

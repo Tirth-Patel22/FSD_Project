@@ -1,0 +1,72 @@
+/* Footer main background */
+.footer-1 {
+  background-color: #3E8DA8;
+  color: white;
+  padding: 50px 0;
+}
+
+.footer-1 h3 {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Footer links */
+.footerlink {
+  color: white;
+  text-decoration: none;
+}
+
+.footerlink:hover {
+  color: #f0f0f0;
+  text-decoration: underline;
+}
+
+/* Footer images */
+.footer-img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    border-radius: 50%; /* Circle shape */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+
+/* Footer bottom background */
+.footer-bottom {
+  background-color: #2D6B88;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-bottom .legal {
+  color: white;
+}
+
+.footer-bottom .legal:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .footer-1 {
+    padding: 30px 0;
+  }
+
+  .footer-img {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .footerlink {
+    font-size: 14px;
+  }
+}
+.footer-heading {
+    color: #142f39 !important; /* Dark color for the footer headings */
+}

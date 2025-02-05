@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="navbarstyle.css">
+    <link rel="stylesheet" href="footerstyle.css">
+    <link rel="stylesheet" href="aboutusstyle.css">
+    <script src="navbarscript.js" defer></script>
+    <script src="homepage.js" defer></script>
+    <script src="add_to_cartscript.js" defer></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  </head>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container-fluid">
+          <div class="navbar-brand">
+            <a href="http://127.0.0.1:5500/home.html" class="nav-link"><img src="logo.png" alt="Company Logo" width="100"></a>
+          </div>
+          <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#demo">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="demo">
+            <ul class="navbar-nav align-items-center">
+              <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/home.html">HOME</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="product" data-bs-toggle="dropdown">Products</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Clothing</a></li>
+                  <li><a class="dropdown-item" href="#">Footwear</a></li>
+                  <li><a class="dropdown-item" href="#">Watches</a></li>
+                  <li><a class="dropdown-item" href="#">Hand bags</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <form class="d-flex search-container">
+                  <input class="form-control search-input" type="text" placeholder="Search">
+                  <button class="btn search-btn" type="submit">
+                    🔍
+                  </button>
+                </form>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+              <li class="nav-item"><a class="nav-link atc" href="#"><img src="https://cdn-icons-png.flaticon.com/128/4647/4647563.png" id="img" alt="Cart Icon"></a></li>
+              <li class="nav-item btn"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#userFormModal" id="authButton">Sign up</a></li>
+              <!-- <li class="nav-link"><button id="authButton" class="btn" data-bs-toggle="modal" data-bs-target="#userFormModal">
+                Sign In
+            </button></li> -->
+            
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="modal fade" id="userFormModal" tabindex="-1" aria-labelledby="userFormModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userFormModalLabel">Enter Your Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form inside the modal -->
+                    <form id="userForm">
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                                <div class="invalid-feedback" id="firstNameError"></div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="middleName" class="form-label">Middle Name</label>
+                                <input type="text" class="form-control" id="middleName">
+                                <div class="invalid-feedback" id="middleNameError"></div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                                <div class="invalid-feedback" id="lastNameError"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mobileNumber" class="form-label">Mobile Number</label>
+                            <input type="tel" class="form-control" id="mobileNumber" required>
+                            <div class="invalid-feedback" id="mobileNumberError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback" id="emailError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                            <div class="invalid-feedback" id="passwordError"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" id="submitForm">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- Login Modal -->
+      <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="loginEmail" required>
+                        <div class="invalid-feedback" id="loginEmailError"></div>
+                    </div>
+                    <div class="mb-3 position-relative">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <div class="invalid-feedback" id="loginPasswordError"></div>
+                    </div>
+                    <div class="text-end">
+                        <a id="forgotPassword" onclick="">Forgot Password?</a>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Log In</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+      </div>
+      <div class="about-us">
+        <div class="container">
+            <h1 class="text-center py-5">About Us</h1>
+            <div class="row">
+                <div class="col-md-6 col-12"><img src="https://corporate.flipkart.net/assets/images/technology-image.png" alt="Twitter Logo"></div>
+                <div class="col-md-6 col-12">
+                    <div class="topic">
+                        <div class="heading">What we do</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, reprehenderit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat totam corporis voluptatibus ad maxime dicta? </p>
+                    </div>
+                    <div class="topic">
+                        <div class="heading">Our Mission</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, reprehenderit.</p>
+                    </div>
+                    <div class="topic">
+                        <div class="heading">Our Vision</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, reprehenderit.</p>
+                    </div>
+                    <div class="topic">
+                        <div class="heading">Customer Focus</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, reprehenderit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-12">
+                <div class="p-5">
+                  <div class="task clothing">
+                    <h3 class="counter" data-target="165">0</h3>
+                    <p>Clothing</p>
+                </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="p-5">
+                  <div class="task footwear">
+                    <h3 class="counter" data-target="252">0</h3>
+                    <p>Footwear</p>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-12">
+                <div class="p-5">
+                  <div class="task watches">
+                    <h3 class="counter" data-target="101">0</h3>
+                    <p>Watches</p>
+                </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="p-5">
+                  <div class="task handbags">
+                    <h3 class="counter" data-target="144">0</h3>
+                    <p>handbags</p>
+                </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <!-- Full-width Background -->
+    <div class="footer-1 container-fluid">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1 -->
+          <div class="col-md-4 col-12 text-center text-md-start mb-4 mb-md-0">
+            <div class="d-flex justify-content-center justify-content-md-start">
+              <img src="myresidence.png" id="img1" alt="company logo">
+            </div>
+            <span>All information is deemed reliable but not guaranteed and should be independently reviewed and verified.</span>
+          </div>
+          <!-- Column 2 -->
+          <div class="col-md-3 col-12 text-center text-md-start mb-4 mb-md-0">
+            <h3 class="footer-heading">Visit us</h3>
+            <span>Head Office:</span><br>
+            <span>MyTower,Iskon,380059</span><br>
+            <span>Ahmedabad-Gujarat</span>
+          </div>
+          <!-- Column 3 -->
+          <div class="col-md-3 col-12 text-center text-md-start mb-4 mb-md-0">
+            <h3 class="footer-heading">Contact us</h3>
+            <span>Tel:- +028 XXXXXXXXXX</span><br>
+            <span>email:-<a href="#" class="footerlink">mycompany192@gmail.com</a></span>
+          </div>
+          <!-- Column 4 -->
+          <div class="col-md-2 col-12 text-center text-md-start">
+            <h3 class="footer-heading">Quick Links</h3>
+              <span>
+                    <a href="#" class="footerlink">Clothing</a><br>
+                    <a href="#" class="footerlink">Footwear</a><br>
+                    <a href="#" class="footerlink">Watches</a><br>
+                    <a href="#" class="footerlink">Hand bags</a><br>
+                    <a href="#" class="footerlink">Contact us</a><br>
+                    <a href="#" class="footerlink">About us</a>
+
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom container-fluid d-flex justify-content-between align-items-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-12 text-center">&copy; All rights reserved.</div>
+            <div class="col-md-4 col-12 text-center"><a href="#" class="legal footerlink">Terms of Use & Privacy Policy</a></div>
+            <div class="col-md-4 col-12 d-flex justify-content-center">
+              <a href="#" class="media">
+              <img src="insta.png" class="footer-img" alt="Instagram"></a>
+              <a href="#" class="media">
+              <img src="facebook.png" class="footer-img" alt="facebook"></a>
+              <a href="#" class="media">
+              <img src="twitter.png" class="footer-img" alt="twitter"></a>
+              <a href="#" class="media">
+              <img src="whatsapp.png" class="footer-img" alt="whatsapp"></a></div>
+      
+        </div>
+      </div>
+    </div>
+  </footer>
+</html>

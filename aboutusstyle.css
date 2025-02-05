@@ -1,0 +1,115 @@
+      /* Background color to match the navbar theme */
+.achievements-section {
+  background-color: #EAF4F8; /* Light Blue Shade */
+  padding: 50px 0;
+}
+/* Achievements Title */
+.achievement h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3E8DA8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+.task {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Ensure text is visible */
+  font-weight: bold;
+  text-align: center;
+  height: 250px; /* Adjust height as needed */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform 2s ease, box-shadow 0.3s ease;
+  z-index: 1; /* Ensure text is above the background */
+  overflow: hidden; /* Prevents pseudo-element from overflowing */
+}
+
+.task::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity (0.5 = 50% opacity) */
+  border-radius: 10px;
+  z-index: -1; /* Send it behind the text */
+}
+
+/* Background Images */
+.clothing { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA2VTfuBh18CwAes-5pfvz3b1ubLOK-e6Hjg&s'); }
+.footwear { background-image: url('https://fiverr-res.cloudinary.com/t_mobile_web_2,q_auto,f_auto/gigs/356811691/original/3df2ca306e13f3584f95bd7e58b2e38e7e98688c.png'); }
+.watches { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbyVQYbXijMcRVYtqQDMTvqJEHAXNaEez-Cw&s'); }
+.handbags { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTozm51DYTtk2iIpjqKibH6Db3_sZtyrXEAPg&s'); }
+.rating { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjeeV9Rr6WXcJNahr2YsPzuKrvzcSAtyk4Jg&s'); }
+
+
+/* Hover Effect */
+.task:hover {
+  /* transform: scale(1.1); */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+/* Counter Styling */
+.counter {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+}
+
+/* Description Text */
+p {
+  font-size: 1.2rem;
+  color: white;
+  padding-top: 5px;
+  font-weight: 500;
+}
+.about-us {
+  background-color: whitesmoke;
+color: black;
+padding: 60px 0;
+}
+
+.about-us h1 {
+font-size: 55px;
+font-weight: bolder;
+text-align: center;
+margin-bottom: 30px;
+color: #3E8DA8;
+
+}
+.about-us img {
+width: 100%;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+height: 100%;
+}
+.heading{
+color: black;
+font-weight: bolder;
+font-size: 25px;
+text-align: center;
+padding-bottom: 3%;
+}
+.topic{
+border-radius: 15px;
+/* border: 3px solid black; */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+margin: 3%;
+transition: all 2s linear;
+}
+.topic:hover{
+transform: scale(1.1);
+}
+.topic p{
+color:black;
+text-align: center;
+padding: 2px;
+}
